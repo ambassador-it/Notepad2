@@ -38,6 +38,8 @@ class App(tk.Tk):
         self.submenu1.add_separator()
         self.submenu1.add_command(label='Выход', command=self.save_yes_no_cancel)
         self.submenu2 = tk.Menu(self.menu2, tearoff=0)
+        self.submenu2.add_command(label='Отменить', command=None)
+        self.submenu2.add_separator()
         self.submenu2.add_command(label='Время и дата', command=self.date_insert)
         self.submenu2.add_command(label='Выделить всё')
         self.menu2.add_cascade(label='Файл', menu=self.submenu1)
