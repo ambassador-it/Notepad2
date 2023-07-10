@@ -46,7 +46,9 @@ class App(tk.Tk):
         self.menu2.add_cascade(label='Правка', menu=self.submenu2)
         self.menu2.add_cascade(label='Формат')
         self.menu2.add_cascade(label='Вид')
-
+        self.menu3 = tk.Menu(self)
+        self.submenu2 = tk.Menu(self.menu3, tearoff=0)
+        self.submenu2.add_command(label='Перенос со словами')
         self.submenu5 = tk.Menu(self.menu2, tearoff=0)
         self.submenu5.add_command(label='О программе', command=self.about)
         self.menu2.add_cascade(label='Справка', menu=self.submenu5)
