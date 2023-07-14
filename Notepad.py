@@ -20,7 +20,7 @@ class App(tk.Tk):
         super().__init__()
         self.title('Блокнот')
         self.geometry('750x450')
-        #self.iconbitmap('ico1.ico')
+        self.iconbitmap('ico1.ico')
         self.protocol('WM_DELETE_WINDOW', self.save_yes_no_cancel)
         self.menu = tk.Menu(self, tearoff=0)
         self.menu2 = tk.Menu(self) # То меню которое одно для всех
