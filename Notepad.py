@@ -23,7 +23,7 @@ class App(tk.Tk):
         self.iconbitmap('ico1.ico')
         self.protocol('WM_DELETE_WINDOW', self.save_yes_no_cancel)
         self.menu = tk.Menu(self, tearoff=0)
-        self.menu2 = tk.Menu(self) # То меню которое одно для всех
+        self.menu2 = tk.Menu(self) #То меню которое одно для всех
         #self.menu3 = tk.Menu(self)
         self.menu.add_command(label='Отменить', command=None)
         self.menu.add_separator()
