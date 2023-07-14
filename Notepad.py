@@ -20,10 +20,11 @@ class App(tk.Tk):
         super().__init__()
         self.title('Блокнот')
         self.geometry('750x450')
-        self.iconbitmap('ico1.ico')
+        #self.iconbitmap('ico1.ico')
         self.protocol('WM_DELETE_WINDOW', self.save_yes_no_cancel)
         self.menu = tk.Menu(self, tearoff=0)
-        self.menu2 = tk.Menu(self)
+        self.menu2 = tk.Menu(self) # То меню которое одно для всех
+        #self.menu3 = tk.Menu(self)
         self.menu.add_command(label='Отменить', command=None)
         self.menu.add_separator()
         self.menu.add_command(label='Вырезать', command=self.cut_text)
@@ -44,15 +45,19 @@ class App(tk.Tk):
         self.submenu2.add_command(label='Выделить всё')
         self.menu2.add_cascade(label='Файл', menu=self.submenu1)
         self.menu2.add_cascade(label='Правка', menu=self.submenu2)
-        self.menu2.add_cascade(label='Формат')
+
+        self.submenu3 = tk.Menu(self.menu2, tearoff=0)
+        self.submenu3.add_command(label='Перенос со словами', command=None)
+
+        self.menu2.add_cascade(label='Формат', menu=self.submenu3)
         self.menu2.add_cascade(label='Вид')
-        self.menu3 = tk.Menu(self)
-        self.submenu2 = tk.Menu(self.menu3, tearoff=0)
-        self.submenu2.add_command(label='Перенос со словами')
+
+
         self.submenu5 = tk.Menu(self.menu2, tearoff=0)
         self.submenu5.add_command(label='О программе', command=self.about)
         self.menu2.add_cascade(label='Справка', menu=self.submenu5)
         self.config(menu=self.menu2)
+        #self.config(menu=self.menu3)
 
         self.yscrollbar = tk.Scrollbar(self, orient=tk.VERTICAL)
         self.xscrollbar = tk.Scrollbar(self, orient=tk.HORIZONTAL)
