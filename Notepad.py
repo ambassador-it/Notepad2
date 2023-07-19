@@ -58,7 +58,7 @@ class App(tk.Tk):
         self.menu2.add_cascade(label='Справка', menu=self.submenu5)
         self.config(menu=self.menu2)
         #self.config(menu=self.menu3)
-        #тест проверка
+
         self.yscrollbar = tk.Scrollbar(self, orient=tk.VERTICAL)
         self.xscrollbar = tk.Scrollbar(self, orient=tk.HORIZONTAL)
         self.text = tk.Text(self, xscrollcommand=self.xscrollbar.set,
