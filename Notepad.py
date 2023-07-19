@@ -48,7 +48,7 @@ class App(tk.Tk):
 
         self.submenu3 = tk.Menu(self.menu2, tearoff=0)
         self.submenu3.add_command(label='Перенос со словами', command=None)
-
+        self.submenu3.add_command(label='Шрифт', command=None)
         self.menu2.add_cascade(label='Формат', menu=self.submenu3)
         self.menu2.add_cascade(label='Вид')
 
