@@ -58,6 +58,7 @@ class App(tk.Tk):
 
         self.submenu5 = tk.Menu(self.menu2, tearoff=0)
         self.submenu5.add_command(label='О программе', command=self.about)
+        self.submenu5.add_command(label='Просмотреть справку', command='help')
         self.menu2.add_cascade(label='Справка', menu=self.submenu5)
         self.config(menu=self.menu2)
         #self.config(menu=self.menu3)
